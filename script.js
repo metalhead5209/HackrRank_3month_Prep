@@ -1,5 +1,9 @@
-'use strict'
 console.log('// ************** PLUS MINUS ***************** //')
+
+/* Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with 6 places after the decimal.
+
+Note: This challenge introduces precision problems. The test cases are scaled to six decimal places, though answers with absolute error of up to 10 to the negative 4th are acceptable. 
+*/
 
 const ar = [9,3,7,-5,4,0,-6,4,0,0,-9,-6];
 
@@ -29,34 +33,50 @@ const plusMinus = (arr) => {
 
 plusMinus(ar)
 
+
+
+
 console.log('// ******************************************* //')
 console.log('// ************* Mini-Max Sum **************** //')
 
-const arr = [1,3,5,7,9];
+
+
+
+
+
+
+/* Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers. 
+*/
+
+
+const arr = [1,3,5,7,9]
 
 const miniMaxSum = (ar) => {
     ar.sort();
     let min = 0;
     let max = 0;
-    const minHash = [];
-    const maxHash = [];
+    let minAr = [];
+    let maxAr = [];
     for (let i = 0; i < ar.length - 1; i++) {
-       minHash.push(ar[i]);
+        minAr.push(arr[i])
     }
-    for (let j = 1; j < arr.length; j++) {
-        maxHash.push(ar[j]);
+    for (let j = 1; j < ar.length; j++) {
+        maxAr.push(arr[j]);
     }
-    for (let el of minHash) {
-        min += el;
-    };
-    for (let el of maxHash) {
-        max += el;
-    };
+    for (el of minAr) {
+        min+=el;
+    }
+    for (el of maxAr) {
+        max+=el;
+    }
 
 
     console.log(min, max)
 }
 
 miniMaxSum(arr)
+
+
+
 
 console.log('// ******************************************* //')
